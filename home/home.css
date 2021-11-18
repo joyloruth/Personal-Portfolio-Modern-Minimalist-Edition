@@ -1,42 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 *{
-  
+  margin: 0px;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
   transition: all 2s;
+  background-color: whitesmoke;
 }
 
 #menu-icon-container{
-  width: 100px;
-  height: 500px;
-  position: fixed;
-  bottom: 0px;
+  width: 120px;
+  background-image: linear-gradient(rgba(86, 117, 117),rgba(86, 117, 117)) ;
+  height: 80%;
+  padding-top: 80px;
+  box-shadow: 0px 3px 5px grey;
+  z-index: 5;
 }
 
 .menu-icon{
-  width: 200px;
+  width: 250px;
   display: flex;
+  animation: moveUpward 2s ease-in infinite;
 }
+
 .menu-icon:hover .icon-title{
   display: flex;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .icon-title{
   display: none;
-  align-items: center;
 }
 
 .icon-background:hover{
-  background-color: rgb(86, 117, 117);
+  background-color: rgba(166, 175, 175, 0.062);
+  backdrop-filter: blur(30px);
+  border: 2px solid transparent;
 }
 
 .icon-background{
   border-radius: 100%;
-  background-color: whitesmoke;
+  
   width:75px;
   height: 75px;
   margin: 10px;
-  box-shadow: -2px 3px 5px grey ;
+  box-shadow: -2px 3px 5px rgba(56, 56, 56, 0.466) ;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  backdrop-filter: blur(30px);
+  border: 2px solid transparent;
+  background-color: rgba(245, 245, 220, 0.205);
+}
 
+#favicon{
+  width:100%;
+}
+
+h3{
+  font-family: amatic sc;
+  transition: all 2s ease-in-out;
+  font-size: 30px;
+  color: black;
+}
+
+.icon-img{
+  width: 50px;
+  animation: moveUpward 1s infinite;
+}
+
+#about-container{
+  width: 90%;
+  height: 100%;
+  
+  right: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about-info{
+  text-align: justify;
+  padding: 20px;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 0px;
+  animation: increaseFont 2s ease-in;
+  transition: all 1s;
+  animation-fill-mode: forwards;
+  color:white;
+}
+
+h1{
+  padding: 5px;
+  text-align: left;
+  width: 100%;
+  font-family: amatic sc;
+  text-transform: uppercase;
+  font-size: 0px;
+  animation: increaseFont 3s ease-in;
+  animation-fill-mode: forwards;
+  font-weight: 700;
+  color:white;
+}
+
+.line-top{
+  background-color: black;
+  width: 300px;
+  height: 3px;
+  transform: rotate(-50deg);
+  animation: lineTop 1.25s, shortenLine 1s alternate 3;
+  animation-fill-mode: forwards;
+  animation-delay: 0s, 3.5s;
+  border-radius: 100%;
+}
+
+.line-bottom{
+  background-color: black;
+  width: 300px;
+  height: 3px;
+  transform: rotate(50deg);
+  animation:lineBottom 1.25s,  shortenLine 1s alternate 2 ;
+  animation-fill-mode: forwards;
+  animation-delay: 0s, 3.5s;
+  border-radius: 100%;
+}
+
+#block{
+  /* background-image: url("im") linear-gradient(rgba(30, 133, 133, 0.11),rgb(185, 190, 190)) ; */
+  background-image:linear-gradient(to bottom, rgba(185, 190, 190, 0.726),rgba(185, 190, 190, 0.712)),
+    url('images/wallpaper.jpg');
+  height: 80%;
+  width: 25%;
+  right: 0px;
+  padding-top: 80px;
+
+  z-index: 0;
+}
+
+#block2{
+  background-image: linear-gradient(rgba(86, 117, 117),rgba(86, 117, 117)) ;
+  height: 80%;
+  width: 5%;
+  right: 0px;
+  backdrop-filter: blur(30px);
+  border: 2px solid transparent;
+  border-top-left-radius: 5px ;
+}
+
+#image-container{
+  background-color: rgba(85, 83, 83, 0.062);
+  width: 350px;
+  height: 350px;
+  position: absolute;
+  left: 15%;
+  padding: 15px;
+  backdrop-filter: blur(30px);
+  border: 2px solid transparent;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 3px 5px gray;
+}
+
+#computer-photo{
+  width: 100px;
+  height: 100px;
+}
+
+@keyframes lineTop{
+  100%{
+    background-color: rgb(126, 125, 125);
+    transform: rotate(0deg);
+    margin: 10px;
+  }
+}
+
+@keyframes lineBottom{
+  100%{
+    background-color: rgb(124, 124, 124);
+    transform: rotate(0deg);
+    margin: 10px;
+  }
+}
+
+@keyframes increaseFont{
+  100%{font-size:100%;
+        color:rgb(61, 60, 60);}
+}
+
+@keyframes moveUpward{
+  from {top: 0px;}
+  to {top: 2000px;}
 }
