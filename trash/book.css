@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+
+body{
+  background-color: rgb(72, 212, 212);
+  margin: 0px;
+  padding: 0px;
+  border-radius: 20px;
+}
+
+#container{
+  height: 100vh;
+  width: 100%;
+  background-color: blueviolet;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+#book{
+  width:350px;
+  height:500px;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  background: rgb(204, 57, 57);
+  transform-style: preserve-3d;
+  transform: translate(-50%,-50%) perspective(2000px);
+  box-shadow: inset 300px 0 50px rgba(0,0,0,.5), 0 20px 100px rgba(0,0,0,.5);
+  transition: 1s;
+  border-radius: 10px;
+}
+
+#book:hover{
+  transform: translate(-50%,-50%) perspective(2000px) rotate(-10deg);
+  box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5), 0px 10px 100px;
+}
+
+#book::before{
+content:'';
+position: absolute;
+top: -5px;
+left: 0;
+width:100%;
+height: 5px;
+background: black;
+transform-origin: bottom;
+transform: skewX(-45deg);
+}
+
+#book::after{
+content:'';
+position: absolute;
+top: 0px;
+right: -5px;
+width: 5px;
+height: 100%;
+background: black;
+transform-origin: left;
+transform: skewY(-45deg);
+border-radius: 10px;
+}
+
+
+#book-cover{
+  width:100%;
+  height: 100%;
+  position: relative;
+  transform-origin: left;
+  transition: 1s;
+  z-index: 1;
+  border-radius: 20px;
+}
+
+#book-cover img{
+  width: 100%;
+  height: 100%;
+}
+
+#book:hover #book-cover {
+  transform: rotateY(-135deg);
+}
+
+#table-of-contents{
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#portfolio-page{
+  background-color: blue;
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  top:0px;
+  transition: 1s all ease-in;
+}
+
+#portfolio-page:hover{
+  background-color: beige;
+}
+
+
+#block-container{
+  background-color: aqua;
+  width:100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "block1" "block2" "block3"
+                       "block4" "block5" "block6";
+}
+
+.block{
+  background-color: black;
+}
+
+.block:first-child{
+  background-color: rgb(127, 127, 202);
+  grid-area: block1;
+}
+
+.block:nth-child(2){
+  background-color: rgb(89, 89, 218);
+  grid-area: block2;
+}
+.block:nth-child(3){
+  background-color: rgb(135, 135, 230);
+  grid-area: block3;
+}
+.block:nth-child(4){
+  background-color: rgb(156, 156, 216);
+  grid-area: block4;
+}
+.block:nth-child(5){
+  background-color: rgb(56, 56, 163);
+  grid-area: block5;
+}
+
+
+
+.letter{
+   color: white;
+   font-size: 60px;
+   text-shadow: 0px 3px 5px rgba(82, 81, 81, 0.61);
+   opacity: 0%;
+   font-family: Sofia;
+}
+
+.letter:first-child{
+  animation: fadeLetter 1s;
+  animation-delay: .5s;
+  animation-fill-mode: forwards;
+}
+.letter:nth-child(2){
+  animation: fadeLetter 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+.letter:nth-child(3){
+  animation: fadeLetter 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+.letter:nth-child(4){
+  width:20px;
+  
+}
+.letter:nth-child(5){
+  animation: fadeLetter 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+.letter:nth-child(6){
+  animation: fadeLetter 1s;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+}
+.letter:nth-child(7){
+  animation: fadeLetter 1s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+.letter:nth-child(8){
+  animation: fadeLetter 1s;
+  animation-delay: 3.5s;
+  animation-fill-mode: forwards;
+}
+.letter:nth-child(9){
+  animation: fadeLetter 2s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+}
+.letter:nth-child(10){
+  animation: fadeLetter 2s;
+  animation-delay: 4.5s;
+  animation-fill-mode: forwards;
+}
+
+
+
+#transition{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+@keyframes fadeLetter{
+    0%{ opacity: 0%;}
+  100%{ opacity: 100%}
+}
+
+#console{
+  width:100%;
+  height: 300px;
+  background-color: lightblue;
+}
+
+#doors{
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  
+}
+
+.door.left{
+  width: 50%;
+  height: 100%;
+  background-color: aliceblue;
+  border-right: 2px black groove;
+  animation: openLeftDoor 2s  infinite;
+}
+
+.door.right{
+  width: 50%;
+  height: 100%;
+  background-color: rgb(23, 103, 184);
+  animation: openRightDoor 2s infinite;
+}
+
+@keyframes openRightDoor{
+  100%{
+    transform: translateX(100%);
+  }
+}
+
+@keyframes openLeftDoor{
+  100%{
+    transform: translateX(-100%);
+  }
+}
+
+

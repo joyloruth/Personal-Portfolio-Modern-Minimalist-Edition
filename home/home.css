@@ -1,0 +1,42 @@
+*{
+  
+  transition: all 2s;
+}
+
+#menu-icon-container{
+  width: 100px;
+  height: 500px;
+  position: fixed;
+  bottom: 0px;
+}
+
+.menu-icon{
+  width: 200px;
+  display: flex;
+}
+.menu-icon:hover .icon-title{
+  display: flex;
+}
+
+.icon-title{
+  display: none;
+  align-items: center;
+}
+
+.icon-background:hover{
+  background-color: rgb(86, 117, 117);
+}
+
+.icon-background{
+  border-radius: 100%;
+  background-color: whitesmoke;
+  width:75px;
+  height: 75px;
+  margin: 10px;
+  box-shadow: -2px 3px 5px grey ;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
