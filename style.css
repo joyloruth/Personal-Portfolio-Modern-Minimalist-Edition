@@ -133,9 +133,11 @@ body{
   font-size: 20px;
   text-transform: uppercase;
   color:whitesmoke;
-  background-color:rgba(0, 0, 0, 0.404);
+  background-color: rgb(78, 102, 97);
   animation: lineBottom 4s alternate-reverse;
   transition: all;
+  border-radius: 5px;
+  border:groove 1px ;
 }
 
 @keyframes close{
@@ -170,7 +172,7 @@ body{
 
 @keyframes lineTop{
   100%{
-    background-color: rgb(126, 125, 125);
+    background-color: rgb(78, 102, 97);
     transform: rotate(0deg);
   }
 }

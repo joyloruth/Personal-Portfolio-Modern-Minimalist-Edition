@@ -5,7 +5,6 @@
 
 body{
   width: 100%;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,6 +20,9 @@ body{
   padding-top: 80px;
   box-shadow: 0px 3px 5px grey;
   z-index: 5;
+  position: fixed;
+  bottom: 0px;
+  left:0px;
 }
 
 .menu-icon{
@@ -73,7 +75,7 @@ h3{
   transition: all 2s ease-in-out;
   font-size: 30px;
   color: black;
-} 
+}
 
 .icon-img{
   width: 50px;
@@ -105,7 +107,7 @@ h3{
   color:white;
 }
 
-h1{
+/*h1{
   padding: 5px;
   text-align: left;
   width: 100%;
@@ -116,7 +118,7 @@ h1{
   animation-fill-mode: forwards;
   font-weight: 700;
   color:white;
-}
+}*/
 
 .line-top{
   background-color: black;
@@ -140,99 +142,16 @@ h1{
   border-radius: 100%;
 }
 
-#grid-container{
-   grid-template-columns: 1fr 1fr  1fr;
-   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-   grid-template-areas: "one""two""three"
-   "four""five""six";
-  /* background-image:linear-gradient(to bottom, rgba(185, 190, 190, 0.726),rgba(185, 190, 190, 0.712)),
-    url('images/wallpaper.jpg'); */
-  display: grid;
-  grid-gap: 5px;
-  background-color: rgb(78, 102, 97);
-  height: 90%;
-  width: 350px;
+#block{
+  /* background-image: url("im") linear-gradient(rgba(30, 133, 133, 0.11),rgb(185, 190, 190)) ; */
+  background-image:linear-gradient(to bottom, rgba(185, 190, 190, 0.726),rgba(185, 190, 190, 0.712)),
+    url('images/wallpaper.jpg');
+  height: 80%;
+  width: 25%;
   right: 0px;
+  padding-top: 80px;
+
   z-index: 0;
-  padding: 7px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  box-shadow: 0px 3px 5px gray;
-}
-
-.grid-box{
-  border-radius: 5px;
-  transition: all 2s;
-}
-.grid-box:first-child{
-  grid-area: "one";
-  
-  animation: fadeGridBox 2s  alternate  ease-in-out infinite;
-}
-.grid-box:nth-child(2){
-  grid-area: "two";
-  animation: fadeGridBox 2.5s  alternate infinite;
-}
-.grid-box:nth-child(3){
-  grid-area: "three";
-  animation: fadeGridBox 2.5s  alternate infinite;
-}
-.grid-box:nth-child(4){
-  grid-area: "four";
-  animation: fadeGridBox 2.5s  alternate infinite;
-}
-.grid-box:nth-child(5){
-  grid-area: "five";
-  animation: fadeGridBox 2.1s  alternate infinite;
-}
-.grid-box:nth-child(6){
-  grid-area: "six";
-  animation: fadeGridBox 2.3s  alternate infinite;
-}
-.grid-box:nth-child(7){
-  grid-area: "seven";
-  animation: fadeGridBox 2.6s  alternate infinite;
-}
-.grid-box:nth-child(8){
-  grid-area: "eight";
-  animation: fadeGridBox 2.5s  alternate infinite;
-}
-.grid-box:nth-child(9){
-  grid-area: "nine";
-  animation: fadeGridBox 2.5s  alternate infinite;
-}
-.grid-box:nth-child(10){
-  grid-area: "ten";
-  
-  animation: fadeGridBox 2.9s  alternate infinite;
-}
-.grid-box:nth-child(11){
-  grid-area: "eleven";
-  
-  animation: fadeGridBox 2s  alternate infinite;
-}
-.grid-box:nth-child(12){
-  grid-area: "twelve";
-  
-  animation: fadeGridBox 2s  alternate infinite;
-}
-.grid-box:nth-child(13){
-  grid-area: "thirteen";
-  background-color: rgb(187, 204, 190);
-  animation: fadeGridBox 2s  alternate infinite;
-}
-.grid-box:nth-child(14){
-  grid-area: "fourteen";
-  animation: fadeGridBox 2.3s  alternate infinite;
-}
-.grid-box:nth-child(15){
-  grid-area: "fifteen";
-  background-color: rgba(187, 204, 190, 0.527);
-  animation: fadeGridBox 2.5s  alternate infinite;
-}
-
-@keyframes fadeGridBox{
-  100%{background-color:rgba(245, 245, 245, 0.164);}
 }
 
 #block2{
@@ -246,20 +165,18 @@ h1{
 }
 
 #image-container{
-  background-color: rgba(19, 151, 212, 0.075);
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  left: 20%;
-  top:25%;
+  background-color: rgba(85, 83, 83, 0.062);
+  width: 150px;
+  height: 150px;
+  margin: 10px;
   padding: 15px;
   backdrop-filter: blur(30px);
   border: 2px solid transparent;
-  border-radius: 100%;
+  border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 3px 5px rgb(73, 72, 72);
+  box-shadow: 0px 3px 5px gray;
 }
 
 #computer-photo{
@@ -291,4 +208,47 @@ h1{
 @keyframes moveUpward{
   from {top: 0px;}
   to {top: 2000px;}
+}
+
+/* PROJECT SECTION */
+#project-container{
+  width:70%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+
+.project{
+ padding: 20px;
+ width:500px;
+}
+
+.project-photo{
+  background-color: rgb(85, 83, 83);
+  width: 350px;
+  height: 350px;
+}
+.project-title h1{
+  font-family: amatic sc;
+  font-weight: 600;
+  font-size: 40px;
+}
+.project h2{
+  font-family: amatic sc;
+  font-weight: 600;
+}
+.project-title{
+  padding:10px;
+}
+.project-summary{
+  padding:10px;
+}
+.project-features{
+  padding:10px;
+}
+.project-techStack{
+  padding:10px;
 }
