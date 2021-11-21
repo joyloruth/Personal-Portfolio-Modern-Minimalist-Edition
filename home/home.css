@@ -11,7 +11,8 @@ body{
   justify-content: center;
   flex-direction: row;
   transition: all 2s;
-  background-color: whitesmoke;
+  background-image: linear-gradient(rgb(42, 43, 41), black) ;
+
 }
 
 #menu-icon-container{
