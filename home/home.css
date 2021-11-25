@@ -11,7 +11,7 @@ body{
   justify-content: center;
   flex-direction: row;
   transition: all 2s;
-  background-image: linear-gradient(rgb(42, 43, 41), black) ;
+  background-image: linear-gradient(rgb(191, 196, 187), rgb(223, 215, 215)) ;
 
 }
 
